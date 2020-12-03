@@ -4,7 +4,7 @@ import plotly.express as px
 import xmltodict
 import gender_guesser.detector as gender
 import urllib.request
-
+import os
 
 key = (os.environ.get('key'))
 
