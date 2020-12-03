@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import xmltodict
+import gender_guesser.detector as gender
 import urllib.request
 
 
