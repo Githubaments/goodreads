@@ -1,0 +1,7 @@
+requests==2.24.0
+streamlit==0.70.0
+plotly_express==0.4.1
+pandas==1.0.4 
+gender_guesser.detector
+xmltodict
+urllib.request
