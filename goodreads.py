@@ -5,6 +5,7 @@ import xmltodict
 import gender_guesser.detector as gender
 import urllib.request
 import os
+from pandas.io.json import json_normalize
 
 key = (os.environ.get('key'))
 
