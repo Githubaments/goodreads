@@ -25,7 +25,7 @@ def get_user_data(user_id, key, v='2', shelf='read', per_page='200'):
 
 user_input = str(user_input)
 
-if user_input == None:
+if Len(user_input) == 0:
     st.stop()
 
 
