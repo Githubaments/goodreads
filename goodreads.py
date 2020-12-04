@@ -9,7 +9,7 @@ import os
 key = (os.environ.get('key'))
 
 
-st.set_page_config(page_title='Drink Recommender', page_icon="https://raw.githubusercontent.com/Githubaments/Images/main/favicon.ico")
+st.set_page_config(page_title='Goodreads', page_icon="https://raw.githubusercontent.com/Githubaments/Images/main/favicon.ico")
 
 user_input = st.text_input("Input your own Goodreads Profile Link")
 st.write("Head to [here](https://www.goodreads.com)")
@@ -23,7 +23,13 @@ def get_user_data(user_id, key, v='2', shelf='read', per_page='200'):
     return(contents)
 
 user_input = str(user_input)
+
+If user_input == None:
+    st.stop()
+   
 contents = get_user_data(user_id=user_id, v='2', shelf='read', per_page='200')
+
+
 contents = xmltodict.parse(contents)
 
 df = json_normalize(contents['GoodreadsResponse']['reviews']['review'])
