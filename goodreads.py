@@ -26,6 +26,11 @@ user_input = str(user_input)
 
 if user_input == None:
     st.stop()
+
+
+user_id = ''.join(filter(lambda i: i.isdigit(), user_input))
+user_name = user_input.split(user_id, 1)[1].split('-', 1)[1].replace('-', ' ')
+
    
 contents = get_user_data(user_id=user_id, v='2', shelf='read', per_page='200')
 
