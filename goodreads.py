@@ -23,6 +23,14 @@ def get_user_data(user_id, key, v='2', shelf='read', per_page='200'):
     contents = urllib.request.urlopen(final_url).read()
     return(contents)
 
+    
+def get_user_friend(user_id, key, v='2', shelf='read', per_page='200'):
+    api_url_base = 'https://www.goodreads.com/friend/user/'
+    final_url = api_url_base + user_id + '.xml?key=' + key + \
+        '&v=' + v + '&shelf=' + shelf + '&per_page=' + per_page
+    contents = urllib.request.urlopen(final_url).read()
+    return(contents)
+
 user_input = str(user_input)
 
 if len(user_input) == 0:
@@ -48,3 +56,5 @@ has_records = any(df['read_at_year'])
 
 
 st.write(contents)
+st.write(get_user_data(user_id=user_id,key=key, v='2', shelf='read', per_page='200'))
+
