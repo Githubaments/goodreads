@@ -26,8 +26,7 @@ def get_user_data(user_id, key, v='2', shelf='read', per_page='200'):
     
 def get_user_friend(user_id, key, v='2', shelf='read', per_page='200'):
     api_url_base = 'https://www.goodreads.com/friend/user/'
-    final_url = api_url_base + user_id + '.xml?key=' + key + \
-        '&v=' + v + '&shelf=' + shelf + '&per_page=' + per_page
+    final_url = api_url_base + user_id + '.xml?key=' + key 
     contents = urllib.request.urlopen(final_url).read()
     return(contents)
 
