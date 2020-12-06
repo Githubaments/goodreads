@@ -52,8 +52,8 @@ df['read_at_year'] = [i[-4:] if i != None else i for i in df['read_at']]
 has_records = any(df['read_at_year'])
 
 
-friends = get_user_friend(user_id=user_id,key=key, v='2', shelf='read', per_page='200')
+#friends = get_user_friend(user_id=user_id,key=key, v='2', shelf='read', per_page='200')
 
 st.write(contents)
-st.write(friends)
+#st.write(friends)
 
