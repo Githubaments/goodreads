@@ -60,3 +60,4 @@ st.write(contents)
 df = json_normalize(contents['GoodreadsResponse']['reviews']['review'])
 
 st.write(df)
+st.write(df.columns)
