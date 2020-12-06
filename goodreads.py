@@ -53,7 +53,10 @@ has_records = any(df['read_at_year'])
 
 
 #friends = get_user_friend(user_id=user_id,key=key, v='2', shelf='read', per_page='200')
-
-st.write(contents)
 #st.write(friends)
 
+st.write(contents)
+
+df = json_normalize(contents['GoodreadsResponse']['reviews']['review'])
+
+st.write(df)
